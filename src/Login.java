@@ -137,7 +137,7 @@ public class Login extends javax.swing.JFrame {
              while(input.hasNextLine()){                                        // mientras hayan lineas en listUsers, se repite el bucle
                String [] array = input.nextLine().split(",");                   // se crea el array para ir linea por line y el split para identificar la coma
                
-                   if(tempU.equals(array[0])){                                  // busca dentro de nuestro array temporal que tanto el password y user concuerden
+                   if(tempU.equals(array[0]) && tempP.equals(array[1])){                                  // busca dentro de nuestro array temporal que tanto el password y user concuerden
                   // JOptionPane.showMessageDialog(rootPane, "Success!");
                    MainDetect toDetect = new MainDetect();
                    toDetect.setVisible(true);

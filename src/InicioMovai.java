@@ -12,7 +12,7 @@ String [] Passwords = new String [5]; */
 // ArrayList <String> usuarios = new ArrayList<>();
  String COMMA_DELIMITER = ",";
  String NEW_LINE_SEPARATOR = "\n";
- 
+  BufferedReader br = null;
     
     
     public InicioMovai() {
@@ -173,52 +173,33 @@ String password = txtNewP.getText().toString();
     lista.append(NEW_LINE_SEPARATOR); // espaciado
     lista.flush();
     lista.close();                      // termina el csv y lo guarda
-    JOptionPane.showMessageDialog(rootPane, "Usuario Creado!");
+    JOptionPane.showMessageDialog(rootPane, "Success!");
     
     } catch (Exception e){
         JOptionPane.showMessageDialog(rootPane, "Error");
         
     } 
         
-        
-    
-        
+//******************************************************************************************************************************************************************
         
 
 
 
+
+
+
+
+
+
+
+
+
     
+
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /* Usuarios [0] = txtNewU.getText();
-      Usuarios [1] = txtNewU.getText();
-      Usuarios [2] = txtNewU.getText();
-      Usuarios [3] = txtNewU.getText();
-      Usuarios [4] = txtNewU.getText();
-     Usuarios [5] = txtNewU.getText();
-    
-    Passwords[0] = txtnewP.getText();
-    /*Passwords[1] = txtnewP.getText();
-    Passwords[2] = txtnewP.getText();
-    Passwords[3] = txtnewP.getText();
-    Passwords[4] = txtnewP.getText();
-    Passwords[5] = txtnewP.getText();    */
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void txtNewPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNewPActionPerformed
