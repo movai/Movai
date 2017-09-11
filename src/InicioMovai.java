@@ -2,6 +2,8 @@ import Entities.*;
 import java.util.*;
 import java.text.*;
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class InicioMovai extends javax.swing.JFrame {
@@ -33,7 +35,7 @@ String [] Passwords = new String [5]; */
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jTextField1 = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jCheckBox1 = new javax.swing.JCheckBox();
@@ -72,8 +74,8 @@ String [] Passwords = new String [5]; */
         jLabel8.setFont(new java.awt.Font("Lato Light", 0, 18)); // NOI18N
         jLabel8.setText("Email");
 
-        jTextField1.setBackground(new java.awt.Color(240, 240, 240));
-        jTextField1.setBorder(null);
+        txtEmail.setBackground(new java.awt.Color(240, 240, 240));
+        txtEmail.setBorder(null);
 
         jCheckBox1.setText("I agree to the terms of services");
 
@@ -102,7 +104,7 @@ String [] Passwords = new String [5]; */
                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE))
+                        .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jCheckBox1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE))
@@ -130,7 +132,7 @@ String [] Passwords = new String [5]; */
                 .addGap(30, 30, 30)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
@@ -159,26 +161,82 @@ String [] Passwords = new String [5]; */
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 // sign up button
-
+String email = txtEmail.getText().toString();
 String user = txtNew.getText().toString();                  // se guardan los valores en dos variables
 String password = txtNewP.getText().toString();
 
-    // se inicia el write en el csv file
-    try{
-    FileWriter lista = new FileWriter("src\\Data\\listUsers.csv", true);
+//*******************************************************************************************************************************************************
 
-    lista.write(user);              // ingresa el user en lista
-    lista.append(COMMA_DELIMITER);  // separa el user del password con una comma (user,password)
-    lista.write(password);          // ingresa el password en lista
-    lista.append(NEW_LINE_SEPARATOR); // espaciado
-    lista.flush();
-    lista.close();                      // termina el csv y lo guarda
-    JOptionPane.showMessageDialog(rootPane, "Success!");
-    
-    } catch (Exception e){
-        JOptionPane.showMessageDialog(rootPane, "Error");
-        
-    } 
+  int i = 0;
+  
+  
+  //*******************************************************************************************************************************************************
+  
+  
+       try
+         {
+            Scanner input = new Scanner(new File ("src\\Data\\listUsers.csv"));         // se inicializa el directorio de la lista
+          //     System.out.println(input.nextLine());    <---------------------------- esta linea causa problemas. al quitarla detecta si el usuario es repetido
+            
+             while(input.hasNextLine()){                                        // mientras hayan lineas en listUsers, se repite el bucle
+               String [] array = input.nextLine().split(",");
+                   
+                   if(user.equals(array[0]) ){
+                    
+                        JOptionPane.showMessageDialog(this, "Usuario ya existe!");
+                        break;   
+                                                                        }
+                        
+                    else
+                    {
+                           // se inicia el write en el csv file
+                        try{
+                        FileWriter lista = new FileWriter("src\\Data\\listUsers.csv", true);
+                        
+                        lista.write(user);              // ingresa el user en lista
+                        lista.append(COMMA_DELIMITER);  // separa el user del password con una comma (user,password)
+                        lista.write(password);          // ingresa el password en lista
+                        lista.append(NEW_LINE_SEPARATOR); // espaciado
+                        lista.flush();
+                        lista.close();                      // termina el csv y lo guarda
+                        JOptionPane.showMessageDialog(rootPane, "Success!");
+                        break;
+
+                        } catch (Exception e){
+                            JOptionPane.showMessageDialog(rootPane, "Error");
+
+                        }  
+                    } // fin del else
+
+               
+               
+               
+               
+             } // fin del while
+            
+            
+ //***************************************************************************************************************************************************           
+       } catch (FileNotFoundException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(rootPane, "Error");
+        }
+     
+
+
+
+
+               
+               
+               
+               
+            
+            
+ //***************************************************************************************************************************************************           
+
+
+
+
+
         
 //******************************************************************************************************************************************************************
         
@@ -262,7 +320,7 @@ String password = txtNewP.getText().toString();
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNew;
     private javax.swing.JPasswordField txtNewP;
     // End of variables declaration//GEN-END:variables

@@ -31,7 +31,7 @@ public class Login extends javax.swing.JFrame {
         passdfsd = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
-        back = new javax.swing.JButton();
+        Register = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -62,10 +62,10 @@ public class Login extends javax.swing.JFrame {
 
         passdfsd.setText("Password");
 
-        back.setText("Back");
-        back.addActionListener(new java.awt.event.ActionListener() {
+        Register.setText("Register");
+        Register.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backActionPerformed(evt);
+                RegisterActionPerformed(evt);
             }
         });
 
@@ -88,21 +88,17 @@ public class Login extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(54, 54, 54))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(back)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(132, 132, 132)
                 .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(228, 228, 228))
+                .addGap(62, 62, 62)
+                .addComponent(Register, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(back)
-                .addGap(48, 48, 48)
+                .addGap(91, 91, 91)
                 .addComponent(use, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
                 .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -114,9 +110,11 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15)
                 .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Register, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                    .addComponent(Login, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE))
+                .addContainerGap(178, Short.MAX_VALUE))
         );
 
         pack();
@@ -126,24 +124,27 @@ public class Login extends javax.swing.JFrame {
         // Login Boton
         
      String tempU = txtUser.getText();
-     String tempP = txtPass.getText();
+     String p = txtPass.getText();
      
         try
          {
             Scanner input = new Scanner(new File ("src\\Data\\listUsers.csv"));         // se inicializa el directorio de la lista
-            System.out.println(input.nextLine());                               
+        //    System.out.println(input.nextLine());                               
 
             
              while(input.hasNextLine()){                                        // mientras hayan lineas en listUsers, se repite el bucle
                String [] array = input.nextLine().split(",");                   // se crea el array para ir linea por line y el split para identificar la coma
-               
-                   if(tempU.equals(array[0]) && tempP.equals(array[1])){                                  // busca dentro de nuestro array temporal que tanto el password y user concuerden
+                   if(tempU.equals(array[0]) &&  p.equals(array[1])){                                  // busca dentro de nuestro array temporal que tanto el password y user concuerden
                   // JOptionPane.showMessageDialog(rootPane, "Success!");
                    MainDetect toDetect = new MainDetect();
                    toDetect.setVisible(true);
                    dispose();
                    break;
                                             }
+                   else{
+                        JOptionPane.showMessageDialog(rootPane, "Error");
+                        break;
+                   }
                  
                  }
              
@@ -172,13 +173,11 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPassActionPerformed
 
-    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-       InicioMovai toInicio = new InicioMovai();
-       toInicio.setVisible(true);
-       dispose();
-       
-       
-    }//GEN-LAST:event_backActionPerformed
+    private void RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterActionPerformed
+      InicioMovai toRegister= new InicioMovai();
+                   toRegister.setVisible(true);
+                   dispose();
+    }//GEN-LAST:event_RegisterActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -214,7 +213,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Login;
-    private javax.swing.JButton back;
+    private javax.swing.JButton Register;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
