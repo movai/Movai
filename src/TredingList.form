@@ -86,6 +86,7 @@
                                           <Component id="jLabel25" min="-2" pref="128" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="jLabel72" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator1" min="-2" pref="600" max="-2" attributes="0"/>
@@ -107,6 +108,7 @@
                                           <Component id="jLabel26" alignment="0" min="-2" pref="128" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="jLabel74" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator2" min="-2" pref="600" max="-2" attributes="0"/>
@@ -128,6 +130,7 @@
                                       </Group>
                                   </Group>
                                   <Component id="jLabel46" min="-2" pref="192" max="-2" attributes="0"/>
+                                  <Component id="jLabel75" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator3" min="-2" pref="600" max="-2" attributes="0"/>
@@ -149,6 +152,11 @@
                                       </Group>
                                   </Group>
                                   <Component id="jLabel49" min="-2" pref="326" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel73" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jLabel82" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <Component id="jSeparator4" min="-2" pref="600" max="-2" attributes="0"/>
@@ -170,6 +178,7 @@
                                           <Component id="jLabel32" alignment="0" min="-2" pref="128" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="jLabel76" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator5" min="-2" pref="600" max="-2" attributes="0"/>
@@ -191,6 +200,7 @@
                                       </Group>
                                   </Group>
                                   <Component id="jLabel55" min="-2" pref="173" max="-2" attributes="0"/>
+                                  <Component id="jLabel78" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator6" min="-2" pref="600" max="-2" attributes="0"/>
@@ -212,6 +222,7 @@
                                           <Component id="jLabel36" alignment="0" min="-2" pref="128" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="jLabel77" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator7" min="-2" pref="600" max="-2" attributes="0"/>
@@ -240,6 +251,7 @@
                                       </Group>
                                   </Group>
                                   <Component id="jLabel61" min="-2" pref="179" max="-2" attributes="0"/>
+                                  <Component id="jLabel79" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator8" alignment="0" min="-2" pref="600" max="-2" attributes="0"/>
@@ -261,6 +273,7 @@
                                       </Group>
                                   </Group>
                                   <Component id="jLabel64" min="-2" pref="175" max="-2" attributes="0"/>
+                                  <Component id="jLabel80" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator9" alignment="0" min="-2" pref="600" max="-2" attributes="0"/>
@@ -282,6 +295,7 @@
                                           <Component id="jLabel70" alignment="0" min="-2" pref="128" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <Component id="jLabel81" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Component id="jSeparator10" alignment="0" min="-2" pref="600" max="-2" attributes="0"/>
@@ -295,8 +309,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" pref="95" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" pref="215" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -313,7 +326,10 @@
                                   <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel24" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel72" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
+                          <Component id="jLabel2" min="-2" pref="215" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -338,6 +354,8 @@
                                       <Component id="jLabel27" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="jLabel74" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
@@ -367,6 +385,8 @@
                                       </Group>
                                   </Group>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel75" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
@@ -397,6 +417,11 @@
                                       <Component id="jLabel31" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel82" min="-2" pref="42" max="-2" attributes="0"/>
+                                  <Component id="jLabel73" pref="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -423,6 +448,8 @@
                                       <Component id="jLabel33" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel76" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -449,6 +476,8 @@
                                       <Component id="jLabel35" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel78" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -475,6 +504,8 @@
                                       <Component id="jLabel37" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel77" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -501,6 +532,8 @@
                                       <Component id="jLabel39" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel79" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -527,6 +560,8 @@
                                       <Component id="jLabel41" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel80" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -553,6 +588,8 @@
                                       <Component id="jLabel71" min="-2" pref="24" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel81" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
@@ -605,7 +642,7 @@
                   <Color blue="89" green="0" red="cc" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/220px-Dunkirk_filmi_afi&#x15f;i.jpg"/>
+                  <Image iconType="3" name="/Imagenes/dunkir.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Poster"/>
                 <Property name="opaque" type="boolean" value="true"/>
@@ -731,6 +768,7 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="89" green="0" red="cc" type="rgb"/>
                 </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Imagenes/bay.jpg"/>
                 </Property>
@@ -754,7 +792,7 @@
                   <Color blue="89" green="0" red="cc" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/dark.jpg"/>
+                  <Image iconType="3" name="/Imagenes/Icons/dark.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Poster"/>
                 <Property name="opaque" type="boolean" value="true"/>
@@ -779,7 +817,7 @@
                   <Color blue="89" green="0" red="cc" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/wind river.jpg"/>
+                  <Image iconType="3" name="/Imagenes/Icons/wind river.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Poster"/>
                 <Property name="opaque" type="boolean" value="true"/>
@@ -851,7 +889,7 @@
                   <Color blue="89" green="0" red="cc" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/Atomic-Blonde-200.jpg"/>
+                  <Image iconType="3" name="/Imagenes/Icons/Atomic-Blonde-200.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Poster"/>
                 <Property name="opaque" type="boolean" value="true"/>
@@ -873,7 +911,7 @@
                   <Color blue="89" green="0" red="cc" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Imagenes/wonder.jpg"/>
+                  <Image iconType="3" name="/Imagenes/Icons/wonder.jpg"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Poster"/>
                 <Property name="opaque" type="boolean" value="true"/>
@@ -1327,6 +1365,126 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Action Crime"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel72">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel72MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel73">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel73MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel74">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel74MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel75">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel75MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel76">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel76MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel77">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel77MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel78">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel78MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel79">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel79MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel80">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel80MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel81">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/IMDBv2.png.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel81MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel82">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagenes/Netflix-icon_it&apos;s-nice-that.jpg"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel82MouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

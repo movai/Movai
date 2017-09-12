@@ -1,3 +1,8 @@
+
+import java.awt.Color;
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -76,9 +81,11 @@ public class InfoPerfil extends javax.swing.JFrame {
 
         txtEmail.setBackground(new java.awt.Color(240, 240, 240));
         txtEmail.setFont(new java.awt.Font("Segoe UI Symbol", 0, 12)); // NOI18N
+        txtEmail.setText("defaultemail@gmail.com");
         txtEmail.setBorder(null);
 
         txtNew.setBackground(new java.awt.Color(240, 240, 240));
+        txtNew.setText("User1");
         txtNew.setBorder(null);
         txtNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,9 +94,17 @@ public class InfoPerfil extends javax.swing.JFrame {
         });
 
         jLabel1.setText("Back");
+        jLabel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel1MouseMoved(evt);
+            }
+        });
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel1MousePressed(evt);
             }
         });
 
@@ -153,8 +168,8 @@ public class InfoPerfil extends javax.swing.JFrame {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        MainDetect toDetect = new MainDetect();
-        toDetect.setVisible(true);
+        Login toLogin = new Login();
+        toLogin.setVisible(true);
         dispose();
 
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -175,6 +190,14 @@ public class InfoPerfil extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    private void jLabel1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseMoved
+      
+    }//GEN-LAST:event_jLabel1MouseMoved
+
+    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
+   
+    }//GEN-LAST:event_jLabel1MousePressed
+
     /**
      * @param args the command line arguments
      */
@@ -186,7 +209,7 @@ public class InfoPerfil extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

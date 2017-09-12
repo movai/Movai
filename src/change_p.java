@@ -2,26 +2,14 @@
 import java.awt.Color;
 import javax.swing.JOptionPane;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author JD
- */
 public class change_p extends javax.swing.JFrame {
 
-    /**
-     * Creates new form change_p
-     */
     public change_p() {
        // Color color = new Color(Color.WHITE);
         initComponents();
         setLocationRelativeTo(null);
-        getContentPane().setBackground(Color.white );
+    //    getContentPane().setBackground(Color.gray );
     }
 
     /**
@@ -185,7 +173,36 @@ public class change_p extends javax.swing.JFrame {
     }//GEN-LAST:event_p_new2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-     JOptionPane.showMessageDialog(rootPane, "Success!");
+    String temp1 = p_old.getText();
+    String temp2 = p_new.getText();
+    String temp3 = p_new2.getText();
+    
+    
+    
+        if(temp1.equals("1234") || temp1.equals("default")){
+         }
+        else{
+            JOptionPane.showMessageDialog(null, "Old Password does not match!");
+        }
+         
+        
+       if(temp2.equals(temp3)){
+           JOptionPane.showMessageDialog(null, "Success!");
+       }
+       else{
+           JOptionPane.showMessageDialog(null, "New passsword does not match!");
+       }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -213,7 +230,7 @@ public class change_p extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

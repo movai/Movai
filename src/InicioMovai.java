@@ -1,3 +1,4 @@
+
 import Entities.*;
 import java.util.*;
 import java.text.*;
@@ -5,31 +6,44 @@ import java.io.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import jdk.nashorn.internal.scripts.JD;
 
-public class InicioMovai extends javax.swing.JFrame {
-/*
-String [] Usuarios = new String[5];
-String [] Passwords = new String [5]; */
+public class InicioMovai extends  javax.swing.JFrame {
 
-// ArrayList <String> usuarios = new ArrayList<>();
- String COMMA_DELIMITER = ",";
- String NEW_LINE_SEPARATOR = "\n";
-  BufferedReader br = null;
-    
+
     
     public InicioMovai() {
         initComponents();
          setLocationRelativeTo(null);
     }
+    
+ /*   
+//***************************************************************************************************************************************    
+// validar si existe usuario
+public static boolean existe_user(String Usuario2) {
+    
+    for (int i = 0; i < usuario.size(); i++) {
+        
+        if(Usuario2.equals(usuario.get(i))){
+            JOptionPane.showMessageDialog(null, "User exists!");
+        }
+    }
+        return true;
+    
+}    // fin del boolean
+ //***************************************************************************************************************************************     
+    */
+    
 
+        
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtNew = new javax.swing.JTextField();
+        txtUser = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        txtNewP = new javax.swing.JPasswordField();
+        txtPass = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -44,8 +58,8 @@ String [] Passwords = new String [5]; */
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtNew.setBackground(new java.awt.Color(240, 240, 240));
-        txtNew.setBorder(null);
+        txtUser.setBackground(new java.awt.Color(240, 240, 240));
+        txtUser.setBorder(null);
 
         jButton3.setText("Sign Up");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -54,11 +68,11 @@ String [] Passwords = new String [5]; */
             }
         });
 
-        txtNewP.setBackground(new java.awt.Color(240, 240, 240));
-        txtNewP.setBorder(null);
-        txtNewP.addActionListener(new java.awt.event.ActionListener() {
+        txtPass.setBackground(new java.awt.Color(240, 240, 240));
+        txtPass.setBorder(null);
+        txtPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNewPActionPerformed(evt);
+                txtPassActionPerformed(evt);
             }
         });
 
@@ -97,8 +111,8 @@ String [] Passwords = new String [5]; */
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNewP, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNew, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,13 +152,13 @@ String [] Passwords = new String [5]; */
                 .addGap(44, 44, 44)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(txtNew, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(txtNewP, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 4, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
@@ -161,114 +175,94 @@ String [] Passwords = new String [5]; */
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 // sign up button
-String email = txtEmail.getText().toString();
-String user = txtNew.getText().toString();                  // se guardan los valores en dos variables
-String password = txtNewP.getText().toString();
+String tempU=txtUser.getText();
+String tempP=txtPass.getText();
+String tempE=txtEmail.getText();
 
-//*******************************************************************************************************************************************************
+/*
+existe_user(tempU);
 
-  int i = 0;
-  
-  
-  //*******************************************************************************************************************************************************
-  
-  
-       try
-         {
-            Scanner input = new Scanner(new File ("src\\Data\\listUsers.csv"));         // se inicializa el directorio de la lista
-          //     System.out.println(input.nextLine());    <---------------------------- esta linea causa problemas. al quitarla detecta si el usuario es repetido
-            
-             while(input.hasNextLine()){                                        // mientras hayan lineas en listUsers, se repite el bucle
-               String [] array = input.nextLine().split(",");
-                   
-                   if(user.equals(array[0]) ){
-                    
-                        JOptionPane.showMessageDialog(this, "Usuario ya existe!");
-                        break;   
-                                                                        }
-                        
-                    else
-                    {
-                           // se inicia el write en el csv file
-                        try{
-                        FileWriter lista = new FileWriter("src\\Data\\listUsers.csv", true);
-                        
-                        lista.write(user);              // ingresa el user en lista
-                        lista.append(COMMA_DELIMITER);  // separa el user del password con una comma (user,password)
-                        lista.write(password);          // ingresa el password en lista
-                        lista.append(NEW_LINE_SEPARATOR); // espaciado
-                        lista.flush();
-                        lista.close();                      // termina el csv y lo guarda
-                        JOptionPane.showMessageDialog(rootPane, "Success!");
-                        break;
-
-                        } catch (Exception e){
-                            JOptionPane.showMessageDialog(rootPane, "Error");
-
-                        }  
-                    } // fin del else
-
-               
-               
-               
-               
-             } // fin del while
-            
-            
- //***************************************************************************************************************************************************           
-       } catch (FileNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(rootPane, "Error");
-        }
-     
-
-
-
-
-               
-               
-               
-               
-            
-            
- //***************************************************************************************************************************************************           
-
-
-
-
-
+if(existe_user(tempU)==false){
+    if(txtUser.getText().length()> 0 && txtPass.getText().length() > 0){
         
-//******************************************************************************************************************************************************************
-        
-
-
-
-
-
-
-
-
-
-
-
-
+            Datos_Usuarios.guardar(Usuario2, Contraseña2);
+            txtUser.setText("");
+            txtPass.setText("");
+            txtEmail.setText("");
+            
+            JOptionPane.showMessageDialog(null, "Success!");
     
+    }else{
+        JOptionPane.showMessageDialog(null, "No ingreso ningun dato!");
+        
+    }
+}
+*/
 
-        
-        
-        
+ String [] users = new String [] {"User1,User2,User3,User4,User5,JD"};
+ String [] password = new String [] {"defult,12345"};
+ String [] email = new String [] {"jdberrios98@unitec.edu,email@gmail.com"};
+
+
+
+if(tempU.equals("JD")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("User1")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("User2")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("User3")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("User4")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("User5")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("Daniel")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("Mireya")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("JD")){
+    JOptionPane.showMessageDialog(this, "User Already Exists!"); }
+
+else if(tempU.equals("")){
+    JOptionPane.showMessageDialog(this, "Missing fields"); }
+
+
+
+else{
+    JOptionPane.showMessageDialog(null, "Usuario Creado!");
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void txtNewPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNewPActionPerformed
+    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNewPActionPerformed
+    }//GEN-LAST:event_txtPassActionPerformed
 
     private void button32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button32ActionPerformed
-       Login toDetect = new Login();
-                   toDetect.setVisible(true);
-                   dispose();
-        
+     Login toLogin = new Login();
+     toLogin.setVisible(true);
+     dispose();
         
     }//GEN-LAST:event_button32ActionPerformed
 
@@ -284,7 +278,7 @@ String password = txtNewP.getText().toString();
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -321,7 +315,7 @@ String password = txtNewP.getText().toString();
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtNew;
-    private javax.swing.JPasswordField txtNewP;
+    private javax.swing.JPasswordField txtPass;
+    private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
 }

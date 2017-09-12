@@ -1,4 +1,12 @@
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Poster extends javax.swing.JFrame {
 
     public Poster() {
@@ -27,12 +35,17 @@ public class Poster extends javax.swing.JFrame {
         la1 = new javax.swing.JLabel();
         la2 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel002 = new javax.swing.JLabel();
+        jLabel001 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JLABEL.setBackground(new java.awt.Color(204, 0, 137));
-        JLABEL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TLOTR.jpg"))); // NOI18N
+        JLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JLABEL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TLOTRv2.jpg"))); // NOI18N
         JLABEL.setText("Poster");
+        JLABEL.setToolTipText("");
         JLABEL.setOpaque(true);
 
         jLabel3.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 0, 18)); // NOI18N
@@ -96,6 +109,27 @@ public class Poster extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/amazon-video_appicon2_0.png.jpg"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+
+        jLabel002.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/playstore.png.jpg"))); // NOI18N
+        jLabel002.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel002MouseClicked(evt);
+            }
+        });
+
+        jLabel001.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Icons/Netflix-icon_it's-nice-that.jpg"))); // NOI18N
+        jLabel001.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel001MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -122,7 +156,14 @@ public class Poster extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(la2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel001)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel002)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel9))
+                            .addComponent(la2, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 27, Short.MAX_VALUE))
             .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
@@ -139,10 +180,7 @@ public class Poster extends javax.swing.JFrame {
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(JLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(45, 45, 45)
@@ -157,9 +195,16 @@ public class Poster extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(la2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(38, 38, 38)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabel001, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel002, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel9))
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(home, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(top, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -192,6 +237,47 @@ public class Poster extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        try {
+            Desktop.getDesktop().browse(new URL("https://www.amazon.com/gp/product/B00552986K/ref=atv_feed_catalog?tag=decider-wait-20").toURI());
+        }catch (MalformedURLException ex) {
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+
+        } catch (IOException ex){
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel002MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel002MouseClicked
+        try {
+            Desktop.getDesktop().browse(new URL("https://play.google.com/store/movies/details?id=QG1Y-dq-EFE").toURI());
+        }catch (MalformedURLException ex) {
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+
+        } catch (IOException ex){
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jLabel002MouseClicked
+
+    private void jLabel001MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel001MouseClicked
+        try {
+            Desktop.getDesktop().browse(new URL("https://www.netflix.com/hn-en/title/60004480").toURI());
+        }catch (MalformedURLException ex) {
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+
+        } catch (IOException ex){
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(MainFavorites.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jLabel001MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -203,7 +289,7 @@ public class Poster extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -231,12 +317,15 @@ public class Poster extends javax.swing.JFrame {
     private javax.swing.JButton Favorites;
     private javax.swing.JLabel JLABEL;
     private javax.swing.JButton home;
+    private javax.swing.JLabel jLabel001;
+    private javax.swing.JLabel jLabel002;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel la;
     private javax.swing.JLabel la1;

@@ -122,51 +122,79 @@ public class Login extends javax.swing.JFrame {
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
         // Login Boton
+String u=txtUser.getText();
+String p=txtPass.getText();
         
-     String tempU = txtUser.getText();
-     String p = txtPass.getText();
-     
-        try
-         {
-            Scanner input = new Scanner(new File ("src\\Data\\listUsers.csv"));         // se inicializa el directorio de la lista
-        //    System.out.println(input.nextLine());                               
+        
+ String  users ="User1,User2,User3,User4,User5,JD";
+ String [] password = new String [] {"defult,12345"};
+ String [] email = new String [] {"jdberrios98@unitec.edu,email@gmail.com"};       
 
-            
-             while(input.hasNextLine()){                                        // mientras hayan lineas en listUsers, se repite el bucle
-               String [] array = input.nextLine().split(",");                   // se crea el array para ir linea por line y el split para identificar la coma
-                   if(tempU.equals(array[0]) &&  p.equals(array[1])){                                  // busca dentro de nuestro array temporal que tanto el password y user concuerden
-                  // JOptionPane.showMessageDialog(rootPane, "Success!");
-                   MainDetect toDetect = new MainDetect();
-                   toDetect.setVisible(true);
-                   dispose();
-                   break;
-                                            }
-                   else{
-                        JOptionPane.showMessageDialog(rootPane, "Error");
-                        break;
-                   }
-                 
-                 }
-             
-             
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(rootPane, "Error");
-        }
-     
-             
-            
-            
-            
-            
-     
+if(u.equals("JD") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+      MainDetect toDetect = new MainDetect();
+      toDetect.setVisible(true);
+      dispose();
+}
+else if(u.equals("User1") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+     MainDetect toDetect = new MainDetect();
+      toDetect.setVisible(true);
+      dispose();
+}    
+else if(u.equals("User2") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+     MainDetect toDetect = new MainDetect();
+      toDetect.setVisible(true);
+      dispose();
+}        
+else if(u.equals("User3") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+     MainDetect toDetect = new MainDetect();
+      toDetect.setVisible(true);
+      dispose();
+}        
         
+else if(u.equals("User4") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+}        
         
+else if(u.equals("User5") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+     MainDetect toDetect = new MainDetect();
+      toDetect.setVisible(true);
+      dispose();
+}        
         
+else if(u.equals("Daniel") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+}        
         
-        
-        
-        
+ else if(u.equals("Diego") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+     MainDetect toDetect = new MainDetect();
+      toDetect.setVisible(true);
+      dispose();
+}        
+                       
+ else if(u.equals("Mireya") && p.equals("1234") || p.equals("default")){
+    JOptionPane.showMessageDialog(this, "Correct!");
+     MainDetect toDetect = new MainDetect();
+      toDetect.setVisible(true);
+      dispose();
+}    
+
+ else{
+     JOptionPane.showMessageDialog(null, "Incorrect username or password");
+ }
+
+
+
+
+
+
+
+
     }//GEN-LAST:event_LoginActionPerformed
 
     private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
@@ -187,7 +215,7 @@ public class Login extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
